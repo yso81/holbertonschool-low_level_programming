@@ -1,15 +1,17 @@
-#include <stdio.h>
-
+#include "main.h"
+#include "2-strlen.c"
 /**
- * _puts - Prints a string, followed by a new line, to stdout.
- * @str: A pointer to the string to be printed.
+ * _puts - puts a string
+ *
+ * @str: string to print
  */
 void _puts(char *str)
 {
-	while (*str)
+	int i;
+
+	for (i = 0; *(str + i) != '\0'; i++)
 	{
-		putchar(*str);
-		str++;
+		_putchar(*(str + i));
 	}
-	putchar('\n');
+	_putchar('\n');
 }

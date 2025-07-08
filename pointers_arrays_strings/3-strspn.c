@@ -34,7 +34,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else
 		{
-			/* The character was found in accept, we increment our byte count 
+			/*
+			 * The character was found in accept, we increment our byte count
 			 * and continue to the next character in s.
 			 */
 			bytes++;

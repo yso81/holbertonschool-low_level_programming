@@ -34,7 +34,7 @@ void print_diagsums(int *a, int size)
 		 * The 1D index for an element at [i][size - 1 - i]
 		 * is (i * size) + (size - 1 -i).
 		 */
-		sum2 += a[(i * size) + (size - 1 -i)];
+		sum2 += a[(i * size) + (size - 1 - i)];
 	}
 
 	printf("%d, %d\n", sum1, sum2);

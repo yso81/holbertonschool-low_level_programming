@@ -18,7 +18,7 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime_number - recursively checks if a number is prime.
+ * is_prime_helper - recursively checks if a number is prime.
  * @n: number to evaluate.
  * @i: iterator.
  *

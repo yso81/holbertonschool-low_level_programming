@@ -1,6 +1,7 @@
 #include <stdlib.h>
 
 /**
+ * str_concat - Concatenates two strings.
  * @s1: The first string.
  * @s2: The second string.
  *
@@ -31,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 				concatenated[i] = s1[i];
 
 	for (j = 0; j < len2; j++)
-		concatenated[j] = s2[j];
+		concatenated[i + j] = s2[j];
 
 	concatenated[i + j] = '\0';
 

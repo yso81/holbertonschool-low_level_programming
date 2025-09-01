@@ -15,6 +15,8 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new_node;
 	char *dup_str;
 	unsigned int len = 0;
+	const char *s;
+	unsigned int i;
 
 	if (head == NULL || str == NULL)
 		return (NULL);
@@ -23,7 +25,8 @@ list_t *add_node(list_t **head, const char *str)
 	if (new_node == NULL)
 		return (NULL);
 
-	const char *s = str;
+	s = str;
+
 	while (*s)
 	{
 		len++;
@@ -36,12 +39,11 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	for (s = str; *s != '\0'; s++)
+	for (i = 0; i < len; i++)
 	{
-		*dup_str++ = *s;
+		dup_str[i] = str[i];
 	}
-	*dup_str = '\0';
-	dup_str -= len;
+	dup_str[len] = '\0';
 
 	new_node->str = dup_str;
 	new_node->len = len;
